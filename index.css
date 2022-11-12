@@ -1,0 +1,341 @@
+:root{
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: var(--secondary-color);
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows:15% 85% ;
+    grid-template-areas: "info"
+    "team"
+}
+
+figure{
+    width: max-content;
+    height: max-content;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer :where(span, a){
+    color: #686868;
+}
+
+footer span :first-child{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.info{
+    width: 100%;
+    height: 100%;
+    grid-area: info;
+    
+}
+
+.txt__info{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "title about";
+}
+
+.title{
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.about{
+    justify-self: center;
+    align-self: end;
+    width: 450px;
+    grid-area: about;
+}
+
+.title h1{
+    font-family: 'PT Serif';
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.045em;
+}
+
+.about h3{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.about p{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.team{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: team;
+    padding-top: 100px;
+}
+
+.team__cards{
+    width: max-content;
+    height: max-content;
+    display: grid;
+    grid-template-rows: repeat(100, 10px);
+    grid-template-columns: repeat(100, 10px);
+}
+
+.column2{
+    margin-top: 100px;
+}
+
+.rick{
+    grid-row: 1/35;
+    grid-column: 7/34;
+}
+
+.summer{
+    grid-row: 7/42;
+    grid-column: 38/66;
+}
+
+.jerry{
+    grid-row: 1/35;
+    grid-column: 70/97;
+}
+
+.morty{
+    grid-row: 42/77;
+    grid-column: 7/34;
+}
+
+.beth{
+    grid-row: 49/84;
+    grid-column: 38/66;
+}
+
+.unknown{
+    grid-row: 42/77;
+    grid-column: 70/97;
+}
+
+.team__cards .figure__img{
+    width: 240px;
+    height: 340px;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;      
+}
+
+.team__cards .figure__img img{
+    width: 150%; 
+    height: 100%;
+    
+}
+
+.team__cards figcaption{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 10px;
+    grid-column: 1;
+}
+
+.rotate{
+    transform: rotate(90deg);
+    width: 50px;
+    height: fit-content;
+    position: relative;
+    left: 95%;
+    top: -355px;
+}
+
+.team__cards .rotate span{
+    font-family: 'PT Serif';
+    font-size: 18px;
+}
+
+
+@media (max-width: 430px) {
+
+    main{
+        grid-template-rows: 20% 80%;
+    }
+
+    figure{
+        width: fit-content;
+    }
+
+    footer :where(span, a){
+        font-size: 14px;
+    }
+
+    .txt__info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: start;
+    }
+
+    .title{
+        width: max-content;
+        margin-left: 12px;
+        margin-bottom: 20px;
+    }
+
+    .about{
+        width: 325px;
+        margin-left: 12px;
+        align-self: start;
+    }
+    
+    .title h1{
+        font-size: 36px;
+    }
+
+    .about h3 {
+        font-size: 18px;
+    }
+
+    .about p{
+        font-size: 14px;
+    }
+
+    .team{
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .team__cards{
+        grid-template-rows: repeat(120, 10px);
+        grid-template-columns: repeat(37, 10px);
+        padding: 10px;
+    }
+
+    .rick{
+        grid-row: 1/25 ;
+        grid-column: 1/15;
+    }
+
+    .summer{
+        grid-row: 5/32;
+        grid-column: 20/35;
+    }
+
+    .morty{
+        grid-row: 37/54;
+        grid-column: 1/15;
+    }
+
+    .beth{
+        grid-row: 42/61;
+        grid-column: 20/35;
+    }
+
+    .jerry{
+        grid-row: 74/99;
+        grid-column: 1/15;
+    }
+
+    .unknown{
+        grid-row: 79/104;
+        grid-column: 20/35;
+    }
+
+    .team__cards .figure__img{
+        width: 154px;
+        height: 261px;
+    }
+
+    .team__cards .figure__img figcaption{
+        font-size: 12px;
+    }
+
+    .rotate{
+        top: -280px;
+    }
+
+    .rotate span{
+        font-size: 10px;
+    }
+}
+
+@media (max-width:375px ) {
+
+    .team__cards{
+        grid-template-columns: repeat(35, 10px);
+    }
+
+    .team__cards .figure__img{
+        width: 124px;
+        height: 221px;
+    }
+    
+    .rick{
+        grid-row: 1/25 ;
+        grid-column: 1/15;
+    }
+
+    .summer{
+        grid-row: 5/30;
+        grid-column: 20/35;
+    }
+
+    .morty{
+        grid-row: 32/57;
+        grid-column: 1/15;
+    }
+
+    .beth{
+        grid-row: 37/62;
+        grid-column: 20/35;
+    }
+
+    .jerry{
+        grid-row: 64/89;
+        grid-column: 1/15;
+    }
+
+    .unknown{
+        grid-row: 71/96;
+        grid-column: 20/35;
+    }
+
+    .rotate{
+        width: 60px;
+        top: -240px;
+        left: 110px;
+    }
+
+
+}
