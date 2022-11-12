@@ -339,3 +339,55 @@ footer span :first-child{
 
 
 }
+
+@media (max-width: 840px) {
+
+    .about{
+        width: 400px;
+    }
+
+    .team__cards{
+        grid-template-columns: repeat(63, 10px);
+    }
+
+    .team__cards .figure__img{
+        width: 221px;
+        height: 321px;
+    }
+    
+    .rick{
+        grid-row: 1/30 ;
+        grid-column: 1/25;
+    }
+
+    .summer{
+        grid-row: 5/35;
+        grid-column: 26/51;
+    }
+
+    .morty{
+        grid-row: 40/70;
+        grid-column: 1/15;
+    }
+
+    .beth{
+        grid-row: 45/75;
+        grid-column: 26/51;
+    }
+
+    .jerry{
+        grid-row: 1/25;
+        grid-column: 51/75;
+    }
+
+    .unknown{
+        grid-row: 40/70;
+        grid-column: 51/75;
+    }
+
+    .rotate{
+        top: -340px;
+        left: 210px;
+    }
+    
+}
